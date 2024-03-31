@@ -1,0 +1,2 @@
+1. fix candleCount system if candles are less than initial candle count.
+done

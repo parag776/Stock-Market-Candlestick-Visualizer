@@ -1,0 +1,35 @@
+1. in code above data is assumed to be inside an array, but in production code data will be in database.
+I will update the code later when i learn clearly about database mongoDB and backend servers.
+
+above fix: data will be in array in client side, but in server side data will be in databases.
+currently i am making client side.
+
+2. candle function has to be updated as follows:
+	-> rather than asking for x and pixel to price ratio ask for xScale.
+	-> rather than asking for y and pixel to date ratio ask for yScale.
+2nd done.
+
+3. directly send or any chartAndAxis inside createScales.
+
+4. make cursor grab when grabbing the chart
+
+5. take a look at what to send via function argument and what to send as export global variables.
+
+6. in Y - axis when number size in increased Y-axis width is increased in trading view, look at that.
+
+7. tick sizes based on data, check all data data having maximum digits after decimal will be tick size.,
+as and when data is updated, so is tick size.
+
+(or you can check single data point along with its digits after decimal while it is still in string format because even if less digits it will still have 0s)
+
+8. updating rather than deleting candles and first updating in dom and then appending to its parent.
+
+9. improvement of scale alot it is currently doing for all the data points, but we have to do for only 
+displaying data points. will do this first then i will think about x axis
+
+i think done ^^ will recheck
+
+10. x Axis have to make good dates
+
+11. have to add lines horizontal and verticles inside chart
+
