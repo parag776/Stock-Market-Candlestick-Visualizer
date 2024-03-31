@@ -78,62 +78,62 @@ function countDateFreqHelper(fullXArr, dateTypeIndex){
 
 }
 
-function fillXAxisArr(l, r, maxTickCount, fullXArr, xAxisArr, dateTypeIndex){
+// function fillXAxisArr(l, r, maxTickCount, fullXArr, xAxisArr, dateTypeIndex){
 
-    if(r<l) return;
-    if(curTicksCount==4) {
-        console.log("something wrong with your current code please check it")
-        return;
-    }
+//     if(r<l) return;
+//     if(curTicksCount==4) {
+//         console.log("something wrong with your current code please check it")
+//         return;
+//     }
 
-    let curCountArr = countDateFreqHelper(fullXArr, dateTypeIndex);
+//     let curCountArr = countDateFreqHelper(fullXArr, dateTypeIndex);
 
-    if(curCountArr.length<=maxTickCount){
+//     if(curCountArr.length<=maxTickCount){
 
-        let runningL = l;
+//         let runningL = l;
 
-        for(let i=0;i<curCountArr.size();i++){
+//         for(let i=0;i<curCountArr.size();i++){
 
-            fillXAxisArr(runningL, curCountArr[i]-1, Math.round(maxTickCount*(curCountArr[i]-runningL)/(r-l+1)),fullXArr, xAxisArr, dateTypeIndex+1);
-            pushDateInArray(xAxisArr, fullXArr, curCountArr[i], dateTypeIndex);
-        }
-    } else {
+//             fillXAxisArr(runningL, curCountArr[i]-1, Math.round(maxTickCount*(curCountArr[i]-runningL)/(r-l+1)),fullXArr, xAxisArr, dateTypeIndex+1);
+//             pushDateInArray(xAxisArr, fullXArr, curCountArr[i], dateTypeIndex);
+//         }
+//     } else {
         
-        if(dateTypeIndex==3){
+//         if(dateTypeIndex==3){
 
-        } else {
+//         } else {
 
             
 
-        }
+//         }
 
-    }
-
-    // its a temporary answer.
-    // will fill full answer later
-
-
-    // let ans = []
-
-    // let gap = Math.ceil(fullXArr.length/10);
-    // for(let i=0;i<fullXArr.length;i+=gap){
-    //     ans.push(fullXArr[i]);
-    // }
-
-    // return ans;
-
-}
-
-// function fillXAxisArr(fullXArr){
-//     let ans = []
-
-//     let gap = Math.ceil(fullXArr.length/10);
-//     for(let i=0;i<fullXArr.length;i+=gap){
-//         ans.push(fullXArr[i]);
 //     }
 
-//     return ans;
+//     // its a temporary answer.
+//     // will fill full answer later
+
+
+//     // let ans = []
+
+//     // let gap = Math.ceil(fullXArr.length/10);
+//     // for(let i=0;i<fullXArr.length;i+=gap){
+//     //     ans.push(fullXArr[i]);
+//     // }
+
+//     // return ans;
+
 // }
+
+function fillXAxisArr(fullXArr){
+    let ans = []
+
+    let gap = Math.ceil(fullXArr.length/10);
+    for(let i=0;i<fullXArr.length;i+=gap){
+        ans.push(fullXArr[i]);
+    }
+
+    return ans;
+}
 
 
 
