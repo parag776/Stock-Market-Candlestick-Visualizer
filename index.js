@@ -6,4 +6,4 @@ const chartContainer = d3.select("body")
     .attr("width", 900)
     .attr("height", 600)
 
-fullChart(chartContainer, "Google");
+fullChart(chartContainer, "Coding Blocks");
